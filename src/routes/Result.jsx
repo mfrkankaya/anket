@@ -6,7 +6,7 @@ export const Result = () => {
 
   return (
     <div className="result-page">
-      <div>SKOR</div>
+      <div>TOPLAM PUAN</div>
       <div>{total}</div>
     </div>
   )
