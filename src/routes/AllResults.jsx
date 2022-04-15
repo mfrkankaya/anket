@@ -12,6 +12,7 @@ export const AllResults = () => {
       setCount(count)
     })()
   }, [])
+
   return (
     <div className="result-page">
       <div className="result-key">Ortalama</div>
