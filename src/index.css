@@ -116,13 +116,17 @@ h1 {
   min-height: 100vh;
 }
 
-.result-page div:first-child {
+.result-key {
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
-.result-page div:last-child {
+.result-key:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.result-value {
   font-size: 4rem;
   font-weight: 600;
   line-height: 1;

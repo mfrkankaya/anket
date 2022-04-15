@@ -31,17 +31,19 @@ export const getAvarageResults = async () => {
     const data = snap.val()
     const allUsers = Object.values(data)
 
-    return (
-      allUsers.reduce((prev, current) => {
-        return (
-          prev +
-          Object.values(current).reduce(
-            (_prev, _current) => _prev + _current,
-            0
+    return {
+      count: allUsers.length,
+      avarage:
+        allUsers.reduce((prev, current) => {
+          return (
+            prev +
+            Object.values(current).reduce(
+              (_prev, _current) => _prev + _current,
+              0
+            )
           )
-        )
-      }, 0) / allUsers.length
-    )
+        }, 0) / allUsers.length
+    }
   } catch (error) {
     console.error(error)
     alert('Bilinmeyen bir hata oluştu.')
